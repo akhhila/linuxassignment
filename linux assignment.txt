@@ -1,0 +1,126 @@
+20. ls command
+22. ls -al
+24. ls -l
+26. ls -al
+28. ls -R
+30. ls -S
+32. ls -t
+36. cd command
+38. env
+40. shows the host time
+42. cat
+46. Yes
+48. No
+50. Whoami
+52. su-sudo
+54. sudo
+56. reboot
+58. reboot -p
+60. ps aux
+62. 1.use 2.PID 3.%cpu 4.%MEM 5.VSZ 6.RSS 7.TTY 8.STAT 9.START 10.TIME 11.COMMAND
+64. uname -r
+66. uname -r
+68. uname -m
+70. uname -o
+72. uname -a
+74. pwd
+76. cd<path of directory>
+78. cd
+80. cd
+82. cd
+84. history 
+86. history file
+88. About 100 =0 ine of history will be stored
+90. By using history flag command
+92.Up Arrow or Ctrl+P: Go to the previous command in your history. ...
+   Down Arrow or Ctrl+N: Go to the next command in your history.
+   history name of command :Now we will  get the history of particular command
+96 The different types of shells in Linux along with their properties and features.
+    The Bourne Shell (sh):
+   Developed at AT&T Bell Labs by Steve Bourne, the Bourne shell is regarded as the first UNIX shell ever. It is denoted as    sh. It gained popularity due to its    compact nature and high speeds of operation.
+   Drawbacks:
+    1. It doesn’t have in-built functionality to handle logical and arithmetic operations.
+    2. the Bourne shell cannot recall previously used commands.
+   Path: The complete path-name for the Bourne shell is /bin/sh and /sbin/sh. By default, it uses the prompt # for the root user and $ for the non-root users.
+
+2. The GNU Bourne-Again Shell (bash)
+      More popularly known as the Bash shell, the GNU Bourne-Again shell was designed to be compatible with the Bourne shell. It incorporates useful features from       different types of shells in Linux such as Korn shell and C shell.
+
+    It allows us to automatically recall previously used commands and edit them with help of arrow keys, unlike the Bourne shell.
+
+   Path:The complete path-name for the GNU Bourne-Again shell is /bin/bash. By default, it uses the prompt bash-VersionNumber# for the root user and bash-   VersionNumber$ for the non-root users.
+
+3. The C Shell (csh)
+The C shell was created at the University of California by Bill Joy. It is denoted as csh. It was developed to include useful programming features like in-built support for arithmetic operations and a syntax similar to the C programming language.
+
+ Path: The complete path-name for the C shell is /bin/csh. By default, it uses the prompt hostname# for the root user and hostname% for the non-root users.
+4. The Korn Shell (ksh)
+     The Korn shell was developed at AT&T Bell Labs by David Korn, to improve the Bourne shell. It is denoted as ksh. The Korn shell is essentially a superset of the Bourne shell.Besides supporting everything that would be supported by the Bourne shell, it provides users with new functionalities. It allows in-built support for arithmetic operations while offereing interactive features which are similar to the C shell.The Korn shell runs scripts made for the Bourne shell, 
+  Path: The complete path-name for the Korn shell is /bin/ksh. By default, it uses the prompt # for the root user and $ for the non-root users.
+
+5. The Z Shell (zsh)
+   The Z Shell or zsh is a sh shell extension with tons of improvements for customization. If you want a modern shell that has all the features a much more, the zsh    shell is what you’re looking for.
+Some noteworthy features of the z shell include:
+Generate filenames based on given conditions
+Plugins and theming support
+Index of built-in functions
+Command completion
+
+98.Non Login Shell is the shell, which is started by the login shell. For example, A shell which you started from another   shell or started by a program etc. A non login shell executes the following script to set the shell environment.
+100./bin/login
+102.The login shells' responsibility is to start the non-login shell and to make sure that your environment variables are     set so as to ensure that you can get all     the default parameters needed at start-up. Your login shell will set the PATH     environment variable, TERM, the UID and GID of the terminal amongst other things
+104.Non login shell is started by a program without a login. In this case, the program just passes the name of the shell     executable. For example, for a Bash shell    it will be simply bash.
+106.Shell configuration files are executed automatically when you log in and. out of a shell. They initialize and configure      a shell upon login and. perform    cleanup operations upon logout.
+   Use:In computing, configuration files (commonly known simply as config files) are files used to configure the parameters     and initial settings for some computer programs. They are used for user applications, server processes and operating        system settings Others periodically check the configuration files for changes.
+
+110.A shell variable is a variable that is available only to the current shell.It is the operating system's command 
+    interpreter.
+    Types: Parameters $* and $@
+    special parameters that allow accessing all the command-line arguments at once. $* and $@ both will act the same unless     they are enclosed in double quotes, "". Both the parameters specify the command-line arguments.
+112.printenv
+114.()
+116./etc/environment
+118.To create a variable, you just provide a name and value for it. Your variable names should be descriptive and remind    you of the value they hold. A variable name cannot start with a number, nor can it contain spaces.starts with    underscore.
+   Ex:myname='Nemo'
+120.You can quickly launch it from within File Explorer by typing “bash” into the address bar and pressing Enter. Your     default Linux distribution's Bash shell will appear, and the current working directory will be the directory you had     open in File Explorer
+122.Local variable is declared inside a function whereas Global variable is declared outside the function. ... Local     variables are stored on the stack whereas the Global variable are stored on a fixed location decided by the compiler.
+124.If you want to make a variable available to every new process, then you can put it in /etc/environment (requires root     privileges) or ~/. profile . Once you put it in these variables, you typically have to re-login
+128."myapp=.sh"
+130.Globing:The Bash shell feature that is used for matching or expanding specific types of patterns is called globbing.         Globbing is mainly used to match filenames or searching for content in a file. Globbing uses wildcard characters to       create the pattern.
+132.grep -l
+134.grep -n
+136.grep
+138.($grepA[NumberOfLines(5)][search[file])
+140.Quoting is used to remove the special meaning of certain characters or words to the shell. Quoting can be used to     disable special treatment for special characters, to prevent reserved words from being recognized as such, and to     prevent parameter expansion.
+
+147.The find command has a number of options and is very configurable locate uses a previously built database, If database is not updated then locate command will not show the output. to sync the database it is must to execute updatedb command.
+
+151. A Linux file system is a structured collection of files on a disk drive or a partition. A partition is a segment of      memory and contains some specific data. In our machine, there can be various partitions of the memory. Generally,      every partition contains a file system.
+     The Linux file system contains the following sections:
+
+     The root directory (/)
+     A specific data storage format (EXT3, EXT4, BTRFS, XFS and so on)
+     A partition or logical volume having a particular file system.
+
+152.PATH:A path is a unique location to a file or a folder in a file system of an OS. A path to a file is a combination of           alpha-numeric characters.
+    ABSOLUTE PATH:An absolute path is defined as the specifying the location of a file or directory from the root           directory(/). In other words we can say absolute path is a complete path from start of actual filesystem from /           directory
+     Examples:/var/ftp/pub/etc/samba.smb.conf/boot/grub/grub.conf
+        These paths started from / directory which is a root directory for every Linux/Unix machines.
+     Relative Path:Relative path is defined as path related to the present working directory(pwd)
+     Example:I am located in /var/log and I want to change directory to /var/log/kernel. I can use relative path concept to              change directory to kernel
+      Example commands:pwd/var/logcd kernel
+ 
+
+155.Create a File in Linux by using different ways
+    touch Command
+    Redirection Operator
+    cat Command
+    echo Command
+    Heredoc
+    To create a Large File. Using dd command. Using fallocate command.
+
+157.1.$ wipe -rfi private/*
+    2.sfill
+    3.rm
+159.tar[flag][archeive-file] [file or directory to be archeived])_(1.tar cvf file.tar*.txt)
+161.tar xvf file.tar

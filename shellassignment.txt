@@ -26,7 +26,8 @@ echo $s2
 6.num1=2
 num2=4
 num3=6
-echo "$(($num1 + $num2)) $num4".......inka rayali edi full ga avaledhu
+echo "$(($num1 + $num2))"
+echo $num3
 
 7.read -p "FIRST NAME :" s1
 read -p "LAST NAME :" s2

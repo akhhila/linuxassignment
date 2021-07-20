@@ -1,0 +1,258 @@
+1.echo "Hello World!"
+echo "user"
+echo  "home"
+echo  "histcontrol"
+echo "term"
+
+
+2.read -p "user name :"user_name
+read -sp "password :"password
+echo username :$ username
+echo password :$ password
+dt=$(date)
+echo "start of script:$dt">>text.sh
+echo "end of script:$dt">>text1.sh
+
+3.num1=2
+num2=4
+echo $((num1))
+echo $((num2))
+
+4.echo "first sentence $s1"
+echo "second sentence $s2">>redirect4.sh
+echo $s2
+
+
+6.num1=2
+num2=4
+num3=6
+echo "$(($num1 + $num2)) $num4".......inka rayali edi full ga avaledhu
+
+7.read -p "FIRST NAME :" s1
+read -p "LAST NAME :" s2
+read -p "AGE :" s3
+echo HELLO $s1 $s2
+echo "YOUR AGE IS $(expr $s3 +10) AFTER 10 YEARS "
+
+8.SERVERLIST=("serv1" "serv2" "serv3")
+count=0
+for index in ${SERVERLIST[@])}
+do
+echo "processing server:${SERVERLIST[count])}"
+count="'expr $count +1'"
+done
+
+9.read -p "username :" u1
+read -p "password :" p1
+echo the username is $u1  and the password is $p1
+
+10.read -p "USERNAME : " user_name
+
+read -sp "PASSWORD : " pass_word
+
+echo -e "\ndone"
+echo -e "user name -->$user_name \npassword -->$pass_word"
+
+
+11.read -p "enter the number to guess : " number
+   test_number=3
+   if [ $number -eq $test_number ]
+   then 
+      echo "YES THE NUMBER $number YOU GUESS IS RIGHT"
+   else 
+      echo "SORRY! THE NUMBER YOU GUESS IS WRONG"
+fi
+
+12.
+
+13.
+
+14.items=(tea tiffin meals)
+echo "select any one from list"
+for i in ${items[@]}
+do
+    echo " $i"
+done
+read -p "select the item : " item
+case $item in 
+    tea )
+        echo "TEA -->Rs.10" ;;
+        #break ;;
+    tiffin )
+        echo "TIFFIN -->Rs.30" ;;
+        #break ;;
+    meals )
+        echo "MEALS -->Rs.50" ;;
+        #break ;;
+    * ) echo -e  "OUT OF LIST \n PLEASE DO AGAIN" ;;
+        #break;;
+    esac
+
+
+15.read -p "enter a number :" var
+   while [ $var -ne 0 ]
+   do 
+      echo "a simple message $var"
+   ((var--))
+   done 
+
+
+16.while read p
+do
+    echo $p
+done < assignment-16text.txt
+
+assignment 16text file 
+
+chiru nag balaya venky
+pk mb ntr prabhas
+aa rc nani no
+jai balaya ok ok 
+something : Tue Jul  6 10:53:30 IST 2021
+something : Tue Jul  6 10:54:33 IST 2021
+
+17.dt=$(date)
+   while read u
+   do 
+    echo $u
+done < assignment-16text.txt
+echo "end time in assignment-17 : $dt" >> assignment-16text.txt
+
+
+
+18.IFS="|"
+while read line
+do
+    for i in $line
+    do
+        echo "$i"
+    done
+done <assignment-18text.txt
+
+
+19.trap "echo signal detected" SIGINT SIGTSTP 9 15
+choices=(tea coffee milk exit)
+select i in ${choices[@]}
+do
+
+    echo $i
+    case $i in 
+        exit ) break ;;
+        tea )
+            echo $i 
+            for cmd in clear 
+            do
+                $cmd
+            done ;;
+        coffee ) 
+            for cmd in clear 
+            do
+                $cmd
+            done ;;
+        milk ) 
+            for cmd in clear 
+                do
+                    $cmd
+                done ;;
+        * ) echo "proper choice" ;;
+esac
+done
+exit 0
+
+
+21.fun(){
+    echo "inside a function"
+    sleep 5
+}
+
+echo "calling a function"
+sleep 5
+fun
+echo "outside the function"
+
+
+22.fun(){
+    local lvar=9
+    echo "local variable  in function $lvar"
+    sleep 5
+    echo "global var in function $1"
+    sleep 5
+}
+
+gvar=10
+echo "global variable befor calling function $gvar"
+echo "local variable befor calling function $lvar"
+sleep 5
+echo "calling a function"
+fun $gvar
+sleep 5
+echo " after calling a function"
+sleep 5
+echo "global variable befor calling function $gvar"
+echo "local variable befor calling function $lvar"
+
+
+
+23.fun(){
+    local age=$1
+    local total_days_in_year=365
+    in_days=$((age*total_days_in_year))
+    #echo $in_days
+    return $in_days
+}
+confirm(){
+    local age=$1
+    local name=$2
+    echo -e "is this your name $name and age $age is correct [y/n] : \c"
+    read choice
+    if [ $choice = 'y' ]
+    then 
+        fun $age
+        echo "Your name $name and age $age and your age in days $in_days"
+    elif [ $choice = 'n' ]
+    then 
+        echo "run again and please enter correct details"
+    else
+        echo "run again and enter proper choice" 
+    fi   
+}
+echo -e "enter your name : \c"
+read name
+echo -e "what is your age : \c"
+read age
+confirm $age $name
+
+
+24.gender(){
+    local no_of_arms=2
+    local no_of_legs=2
+    if [ $1 = 'male' ]
+    then
+        echo 'male'
+        male $no_of_arms $no_of_legs
+    elif [ $1 = 'female' ]
+    then
+        echo 'female'
+        female $no_of_arms $no_of_legs
+    else
+        echo "error in input"
+    fi
+
+
+}
+male(){
+    arms=$1
+    legs=$2
+    beards="has a beard "
+    echo -e "characteristcs of male:\nno of arms = $arms\nno of legs = $legs\n$beards"
+}
+female(){
+    arms=$1
+    legs=$2
+    beards="NO beard "
+    echo -e "characteristcs of male:\nno of arms = $arms\nno of legs = $legs\n$beards"
+}
+echo -e "enter the gender : \c"
+read gender_deatails
+gender $gender_deatails
+
